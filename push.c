@@ -12,7 +12,7 @@ void push(char *argument)
     
     if (!argument)
     {
-        printf("L%d: usage: push integer1\n", box.line_count);
+        fprintf(stderr, "L%d: usage: push integer1\n", box.line_count);
         exit(EXIT_FAILURE);
     }
     for (itr = 0; argument[itr] != '\0'; itr++)
@@ -21,7 +21,7 @@ void push(char *argument)
             continue;
         if (!isdigit(argument[itr]))
         {
-            printf("L%d: usage: push integer2\n", box.line_count);
+            fprintf(stderr, "L%d: usage: push integer2\n", box.line_count);
             exit(EXIT_FAILURE);
         }
     }
@@ -29,7 +29,7 @@ void push(char *argument)
     new = malloc(sizeof(stack_t));
     if (!new)
     {
-        printf("Error: malloc failed\n");
+        fprintf(stderr, "Error: malloc failed\n");
         exit(EXIT_FAILURE);
     }
     new->n = arg;

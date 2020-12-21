@@ -23,6 +23,6 @@ int get_func(stack_t **stack, char *opcode)
         }
         itr++;
     }
-    printf("L%d: unknown instruction %s\n", box.line_count, opcode);
+    fprintf(stderr, "L%d: unknown instruction %s\n", box.line_count, opcode);
     exit(EXIT_FAILURE);
 }

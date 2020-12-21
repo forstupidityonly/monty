@@ -12,5 +12,5 @@ void pall(stack_t **stack, __attribute__((unused)) unsigned int line_count)
     if(*stack == NULL)
         return;
     for(; selector; selector = selector->next)
-        printf("%d\n", selector->n);
+        fprintf(stderr, "%d\n", selector->n);
 }

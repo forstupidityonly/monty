@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <errno.h>
+#include <ctype.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -58,4 +59,5 @@ void set_storage_null(void);
 int get_func(stack_t **stack, char *opcode);
 void pall(stack_t **stack, unsigned int line_count);
 void pint(stack_t **stack, unsigned int line_count);
+void push(char *argument);
 #endif

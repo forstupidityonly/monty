@@ -33,8 +33,8 @@ int main(int ac, char **av)
         }
         else if (strcmp(opcode, "push") == 0)
         {
-            argument = strtok(NULL, " ");
-            printf("push found %s", argument);
+            argument = strtok(NULL, "  \n");
+            push(argument);
         }
         else
             get_func(&box.stack, opcode);

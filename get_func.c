@@ -10,6 +10,7 @@ int get_func(stack_t **stack, char *opcode)
     instruction_t opt[] = {
         {"pall", pall},
         {"pint", pint},
+        {"nop", nop},
         {NULL, NULL}
     };
 

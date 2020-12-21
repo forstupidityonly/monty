@@ -59,5 +59,6 @@ void set_storage_null(void);
 int get_func(stack_t **stack, char *opcode);
 void pall(stack_t **stack, unsigned int line_count);
 void pint(stack_t **stack, unsigned int line_count);
+void nop(stack_t **stack, unsigned int line_count);
 void push(char *argument);
 #endif

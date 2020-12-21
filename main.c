@@ -1,4 +1,5 @@
 #include "monty.h"
+storage_t box;
 /**
   *
   */

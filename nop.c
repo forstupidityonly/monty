@@ -4,7 +4,7 @@
   * stack: the stack
   * line_count: the line count
   */
-void nop(__attribute__((unused)) stack_t **stack,__attribute__ ((unused)) unsigned int line_count)
+void nop(stack_t **stack, __attribute__ ((unused))unsigned int line_count)
 {
-    return;
+    (void)stack;
 }

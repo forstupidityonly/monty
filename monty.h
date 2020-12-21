@@ -19,9 +19,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+		int n;
+		struct stack_s *prev;
+		struct stack_s *next;
 } stack_t;
 
 /**
@@ -34,8 +34,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /**
   * struct storage_s - global struct to hold things and clean up my code
@@ -46,10 +46,10 @@ typedef struct instruction_s
   */
 typedef struct storage_s
 {
-    FILE *file;
-    char *current_line;
-    stack_t *stack;
-    unsigned int line_count;
+	FILE *file;
+	char *current_line;
+	stack_t *stack;
+	unsigned int line_count;
 } storage_t;
 
 extern storage_t box;

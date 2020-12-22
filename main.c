@@ -13,7 +13,6 @@ int main(int ac, char **av)
 	size_t length = 0;
 	ssize_t buffer;
 	char *opcode;
-	char *argument;
 
 	if (ac != 2)
 	{
@@ -28,20 +27,16 @@ int main(int ac, char **av)
 	}
 	while ((buffer = getline(&box.current_line, &length, box.file)) != -1)
 	{
+		box.line_count++;
+
 		opcode = strtok(box.current_line, " \t\n");
 		if (!opcode || opcode[0] == '#')
-		{
-			box.line_count++;
 			continue;
-		}
-		else if (strcmp(opcode, "push") == 0)
-		{
-			argument = strtok(NULL, "  \t\n");
-			push(argument);
-		}
+
+		if (strcmp(opcode, "push") == 0)
+			push(strtok(NULL, " \t\n"));
 		else
 			get_func(opcode);
-		box.line_count++;
 	}
 	free_stuf();
 	return (EXIT_SUCCESS);

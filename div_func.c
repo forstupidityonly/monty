@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * div - div the top two nodes
+ * div_func - div the top two nodes
  * @stack: the stack
  * @line_count: line count
  * Return: no

@@ -8,12 +8,11 @@
   */
 int main(int ac, char **av)
 {
-
-	set_storage_null();
 	size_t length;
 	ssize_t buffer;
 	char *opcode;
 
+	set_storage_null();
 	if (ac != 2)
 	{
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");

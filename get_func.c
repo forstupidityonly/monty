@@ -15,6 +15,7 @@ void get_func(char *opcode)
 		{"nop", nop},
 		{"swap", swap},
 		{"add", add},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 	for (itr = 0; opt[itr].opcode; ++itr)

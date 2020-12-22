@@ -11,6 +11,7 @@ void get_func(char *opcode)
 	instruction_t opt[] = {
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{"nop", nop},
 		{NULL, NULL}
 	};

@@ -19,27 +19,38 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 ## *setup*
 
 git clone https://github.com/forstupidityonly/monty.git
+
 gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
 ## *Usage*
 
 $ cat bytecodes/00.m 
+
 push 1
+
 push 2
+
 push 3
+
 pall
+
 swap
+
 pall
 
-julien@ubuntu:~/monty$ ./monty bytecodes/09.m 
-3
-2
-1
-2
-3
-1
-julien@ubuntu:~/monty$ 
+$ ./monty bytecodes/09.m 
 
+3
+
+2
+
+1
+
+2
+
+3
+
+1
 ## *Authors*
 
 Corbin VanDeventer

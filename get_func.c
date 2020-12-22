@@ -24,6 +24,6 @@ void get_func(char *opcode)
 		}
 	}
 	dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", box.line_count, opcode);
-	/*free shit*/
+	free_stuf();
 	exit(EXIT_FAILURE);
 }

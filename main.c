@@ -43,6 +43,6 @@ int main(int ac, char **av)
 			get_func(opcode);
 		box.line_count++;
 	}
-		/**free things**/
-		return (EXIT_SUCCESS);
+	free_stuf();
+	return (EXIT_SUCCESS);
 }

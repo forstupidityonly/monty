@@ -62,6 +62,7 @@ void pint(stack_t **stack, unsigned int line_count);
 void nop(stack_t **stack, unsigned int line_count);
 void pop(stack_t **stack, unsigned int line_count);
 void swap(stack_t **stack, unsigned int line_count);
+void add(stack_t **stack, unsigned int line_count);
 void push(char *argument);
 void free_stuf(void);
 #endif

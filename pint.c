@@ -1,12 +1,15 @@
 #include "monty.h"
 /**
   * pint - does stuff
-  * @stack: the stack
-  * @line_count: the opcode
   * Return: no
   */
-void pint(__attribute__((unused)) stack_t **stack,
-__attribute__((unused)) unsigned int line_count)
+void pint(stack_t **stack, unsigned int line_count)
 {
-	printf("pint called");
+	if (!*stack)
+	{
+		dprintf(STDERR_FILENO, "L%u: cont pint, stack empty\n", line_count);
+		free_stuf();
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*stack)->n);
 }

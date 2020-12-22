@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
-  * pint - does stuff
+  * pint - print vat at top of stack
+  * @stack: the working stack
+  * @line_count: the line count
   * Return: no
   */
 void pint(stack_t **stack, unsigned int line_count)

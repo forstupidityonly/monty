@@ -65,6 +65,7 @@ void swap(stack_t **stack, unsigned int line_count);
 void add(stack_t **stack, unsigned int line_count);
 void sub(stack_t **stack, unsigned int line_count);
 void div_func(stack_t **stack, unsigned int line_count);
+void mul(stack_t **stack, unsigned int line_count);
 void push(char *argument);
 void free_stuf(void);
 #endif

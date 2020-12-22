@@ -12,7 +12,7 @@ void push(char *argument)
 
 	if (!argument)
 	{
-		fprintf(stderr, "L%d: usage: push integer1\n", box.line_count);
+		fprintf(stderr, "L%d: usage: push integer\n", box.line_count);
 		exit(EXIT_FAILURE);
 	}
 	for (itr = 0; argument[itr] != '\0'; itr++)
@@ -21,7 +21,7 @@ void push(char *argument)
 			continue;
 		if (!isdigit(argument[itr]))
 		{
-			fprintf(stderr, "L%d: usage: push integer2\n", box.line_count);
+			fprintf(stderr, "L%d: usage: push integer\n", box.line_count);
 			exit(EXIT_FAILURE);
 		}
 	}

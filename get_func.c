@@ -3,30 +3,27 @@
   * get_func - calls the opcode func
   * @stack: the stack
   * @opcode: the opcode
-  * Return: always 1
+  * Return: no
   */
-int get_func(stack_t **stack, char *opcode)
+void get_func(char *opcode)
 {
-	int itr = 0;
-	char *cmd;
+	int itr;
 
-		instruction_t opt[] = {
+	instruction_t opt[] = {
 		{"pall", pall},
 		{"pint", pint},
 		{"nop", nop},
 		{NULL, NULL}
 	};
-
-	cmd = strtok(opcode, "\n");
-	while (opt[itr].opcode != NULL)
+	for (itr = 0; opt[itr].opcode; ++itr)
 	{
-		if (strcmp(cmd, opt[itr].opcode) == 0)
+		if (strcmp(opt[itr].opcode, opcode) == 0)
 		{
-			(opt[itr].f)(stack, box.line_count);
-			return (1);
+			opt[itr].f(&box.stack, box.line_count);
+			return;
 		}
-		itr++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", box.line_count, opcode);
+	dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", box.line_count, opcode);
+	/*free shit*/
 	exit(EXIT_FAILURE);
 }

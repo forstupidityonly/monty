@@ -1,4 +1,5 @@
 #include "monty.h"
+storage_t box;
 /**
   * set_storage_null - does that
   * Return: no

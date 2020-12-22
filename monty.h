@@ -56,7 +56,7 @@ extern storage_t box;
 
 void f_stack(stack_t *stack);
 void set_storage_null(void);
-int get_func(stack_t **stack, char *opcode);
+void get_func(char *opcode);
 void pall(stack_t **stack, unsigned int line_count);
 void pint(stack_t **stack, unsigned int line_count);
 void nop(stack_t **stack, unsigned int line_count);

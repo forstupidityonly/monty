@@ -1,7 +1,6 @@
 #include "monty.h"
 /**
   * get_func - calls the opcode func
-  * @stack: the stack
   * @opcode: the opcode
   * Return: no
   */
@@ -13,7 +12,6 @@ void get_func(char *opcode)
 		{"pall", pall},
 		{"pint", pint},
 		{"nop", nop},
-		{"push", push},
 		{NULL, NULL}
 	};
 	for (itr = 0; opt[itr].opcode; ++itr)
@@ -24,7 +22,8 @@ void get_func(char *opcode)
 			return;
 		}
 	}
-	dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", box.line_count, opcode);
+	dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n",
+	box.line_count, opcode);
 	free_stuf();
 	exit(EXIT_FAILURE);
 }

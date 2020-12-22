@@ -10,7 +10,7 @@ int main(int ac, char **av)
 {
 
 	set_storage_null();
-	size_t length = 0;
+	size_t length;
 	ssize_t buffer;
 	char *opcode;
 
@@ -25,6 +25,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
+	length = 0;
 	while ((buffer = getline(&box.current_line, &length, box.file)) != -1)
 	{
 		box.line_count++;

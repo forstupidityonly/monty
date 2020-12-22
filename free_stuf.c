@@ -5,14 +5,14 @@
  */
 void free_stuf(void)
 {
-    stack_t *tmp;
+	stack_t *tmp;
 
-    while (box.stack)
-    {
-        tmp = box.stack->next;
-        free(box.stack);
-        box.stack = tmp;
-    }
-    free(box.current_line);
-    fclose(box.file);
+	while (box.stack)
+	{
+		tmp = box.stack->next;
+		free(box.stack);
+		box.stack = tmp;
+	}
+	free(box.current_line);
+	fclose(box.file);
 }

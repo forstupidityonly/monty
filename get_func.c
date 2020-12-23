@@ -19,6 +19,7 @@ void get_func(char *opcode)
 		{"div", div_func},
 		{"mul", mul},
 		{"pchar", pchar},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 	for (itr = 0; opt[itr].opcode; ++itr)

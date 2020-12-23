@@ -7,7 +7,7 @@
  */
 void pchar(stack_t **stack, unsigned int line_count)
 {
-	if (!(*stack))
+	if (!(*stack) || !stack)
 	{
 		dprintf(STDERR_FILENO, "L%u: can't pchar, stack empty\n", line_count);
 		free_stuf();

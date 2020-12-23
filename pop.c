@@ -11,7 +11,7 @@ void pop(stack_t **stack, unsigned int line_count)
 
 	if (!(*stack))
 	{
-		dprintf(STDERR_FILENO, "l%u: can't pop an enpty stack\n", line_count);
+		dprintf(STDERR_FILENO, "L%u: can't pop an enpty stack\n", line_count);
 		free_stuf();
 		exit(EXIT_FAILURE);
 	}

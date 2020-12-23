@@ -11,7 +11,7 @@ void div_func(stack_t **stack, unsigned int line_count)
 
 	if ((!(*stack)) || (!(*stack)->next))
 	{
-		dprintf(STDERR_FILENO, "L%u: cant add, stack too short\n", line_count);
+		dprintf(STDERR_FILENO, "L%u: can't add, stack too short\n", line_count);
 		free_stuf();
 		exit(EXIT_FAILURE);
 	}

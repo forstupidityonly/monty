@@ -9,7 +9,7 @@ void pint(stack_t **stack, unsigned int line_count)
 {
 	if (!*stack)
 	{
-		dprintf(STDERR_FILENO, "L%u: cont pint, stack empty\n", line_count);
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty\n", line_count);
 		free_stuf();
 		exit(EXIT_FAILURE);
 	}

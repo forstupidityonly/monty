@@ -1,4 +1,4 @@
-pint
+push -2b
 push 0
    push 1
 push    2

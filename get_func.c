@@ -21,6 +21,7 @@ void get_func(char *opcode)
 		{"pchar", pchar},
 		{"mod", mod},
 		{"pstr", pstr},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 	for (itr = 0; opt[itr].opcode; ++itr)
